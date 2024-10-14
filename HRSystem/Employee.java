@@ -36,6 +36,17 @@ public class Employee {
         // return b;                While This will also work the same
     }
 
+    public void printDetails(){
+        System.out.println("\nDetails of employee: ");
+        System.out.println("Name: "+firstName+" "+lastName);
+        System.out.println("Registration No.: "+registration);
+        System.out.println("Age: "+firstName+" "+age);
+        System.out.println("Days Worked: "+daysWorked);
+        System.out.println("Vacation Days Taken: "+vacationDaysTaken);
+        System.out.println("Salary: "+salary);
+        System.out.println("Years Worked: "+yearsWorked);
+    }
+
 
 
 }

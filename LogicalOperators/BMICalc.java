@@ -23,11 +23,37 @@ public class BMICalc {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Enter your weight in KGs between 0 and 150");
-        double weight = scan.nextDouble();
+        System.out.println("Select the Unit for entering your weight, Enter 1 for entering your weight in Pounds(lbs) or Enter 2 for entering your weight in Kilograms(Kgs)");
+        int unit = scan.nextInt();
+        double weight =0;
+        if(unit==1){
+            System.out.println("Enter your weight in Pounds(lbs)");
+            weight = scan.nextDouble();
+            weight = 0.453592*weight;
+        }
+        else if(unit==2){
+            System.out.println("Enter your weight in Kgs");
+            weight = scan.nextDouble();
+        }
+        System.out.println("\nSelect the unit for entering your height,\nEnter 1 if you want to put your height in meters(m),\nEnter 2 if you want to put your height in centimeters(cm) or\nEnter 3 if you want to put your height in Feets(ft).");
+        int input = scan.nextInt();
+        double height = 0;;
+        if(input==1){
+            System.out.println("Enter your height in meters(m)");
+            height = scan.nextDouble();
+        }
+        else if(input==2){
+            System.out.println("Enter your height in centimeters(cm)");
+            height = scan.nextDouble();
+            height = height/1000;
+        }
+        else if(input==3){
+            System.out.println("Enter your height in feets(ft)");
+            height = scan.nextDouble();
+            height = height*0.3048;
+        }
+        
         if(weight>0 && weight<150){
-            System.out.println("Enter your height in meters between 0 and 2.7");
-            double height = scan.nextDouble();
             if(height>0 && height<2.7){
 
                 double BMI = weight/(height*height);
